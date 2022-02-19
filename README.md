@@ -22,4 +22,3 @@ Real World Data Structures and Algorithms in Go, as well as HackerRank challenge
 2. Binary trees are already orderly. 
 3. Deleting an element is hard. 
 4. For very large datasets, the height is small, and traversing is fast.
-5. 
