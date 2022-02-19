@@ -13,7 +13,7 @@ type Tree struct {
 	Right *Tree
 }
 
-// traverse function allows visiting of nodes with recursion
+// traverse method allows visiting of nodes with recursion
 func traverse(t *Tree) {
 	if t == nil {
 		return
@@ -34,20 +34,22 @@ func create(n int) *Tree {
 	return t
 }
 
+// insert recursive function does lots of functions with each if statements
 func insert(t *Tree, v int) *Tree {
-	if t == nil {
+	if t == nil { // if the tree is empty
 		return &Tree{nil, v, nil}
 	}
-	if v == t.Value {
+	if v == t.Value { // if the value exists in the tree
 		return t
 	}
-	if v < t.Value {
+	if v < t.Value { // if the value should go left or right
 		t.Left = insert(t.Left, v)
 	}
 	t.Right = insert(t.Right, v)
 	return t
 }
 
+// main function
 func main() {
 	tree := create(10)
 	fmt.Println("The root of the tree is ", tree.Value, " \n.")
