@@ -47,3 +47,15 @@ func insert(t *Tree, v int) *Tree {
 	t.Right = insert(t.Right, v)
 	return t
 }
+
+func main() {
+	tree := create(10)
+	fmt.Println("The root of the tree is ", tree.Value, " \n.")
+	traverse(tree)
+	// fmt.Println()
+	tree = insert(tree, -10)
+	tree = insert(tree, -2)
+	traverse(tree)
+	// fmt.Println()
+	fmt.Println(" \n The root of the tree is ", tree.Value)
+}
