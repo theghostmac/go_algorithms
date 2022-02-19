@@ -1,4 +1,4 @@
-# Non-Linear Data Structures
+# Data Structures and Algorithms with Go (2): Growing Your Go Skill with Trees
 
 ## Trees
 Trees are non-linear data structures used mainly for searching. Trees have maximum nodes of
@@ -62,4 +62,76 @@ The following are examples of use-cases of binary trees:
 - Priority queues (PQ) for searching and deleting minimum or maximum values in O(log n) time.
 
 ### Implementing binary trees in Go
+Below is an example code where binary trees are implemented:
+```go
+package main
 
+import (
+	"fmt"
+	"math/rand"
+	"time"
+)
+
+// Tree type of recursive struct
+type Tree struct {
+	Left  *Tree
+	Value int
+	Right *Tree
+}
+
+// traverse method allows visiting of nodes with recursion
+func traverse(t *Tree) {
+	if t == nil {
+		return
+	}
+	traverse(t.Left)
+	fmt.Print(t.Value, " ")
+	traverse(t.Right)
+}
+
+// create function populates the branches with random integers
+func create(n int) *Tree {
+	var t *Tree
+	rand.Seed(time.Now().Unix())
+	for i := 0; i < 2*n; i++ {
+		temp := rand.Intn(n * 2)
+		t = insert(t, temp)
+	}
+	return t
+}
+
+// insert recursive function does lots of functions with each if statements
+func insert(t *Tree, v int) *Tree {
+	if t == nil { // if the tree is empty
+		return &Tree{nil, v, nil}
+	}
+	if v == t.Value { // if the value exists in the tree
+		return t
+	}
+	if v < t.Value { // if the value should go left or right
+		t.Left = insert(t.Left, v)
+	}
+	t.Right = insert(t.Right, v)
+	return t
+}
+
+// main function
+func main() {
+	tree := create(10)
+	fmt.Println("The root of the tree is ", tree.Value, " \n.")
+	traverse(tree)
+	// fmt.Println()
+	tree = insert(tree, -10)
+	tree = insert(tree, -2)
+	traverse(tree)
+	// fmt.Println()
+	fmt.Println(" \n The root of the tree is ", tree.Value)
+}
+```
+
+## Conclusion
+This article teaches the reader about Trees and binary trees. The possible operations 
+with binary trees were also given, along with an implementation of some of these 
+operations.
+In a future article, applications of binary trees in problem-solving with the Go
+programming languages will be given.
