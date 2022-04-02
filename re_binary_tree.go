@@ -9,6 +9,7 @@ type Node struct {
 	rightNode *Node
 }
 
+// BinarySearchTree linkedlist will have a node or more with integer properties
 type BinarySearchTree struct {
 	lock     sync.RWMutex
 	rootNode *Node
@@ -50,8 +51,9 @@ func insertTreeNode(rootNode *Node, newTreeNode *Node) {
 	}
 }
 
+// traverseInOrder visit all nodes in order
 func (tree *BinarySearchTree) traverseInOrder(function func(int)) {
 	tree.lock.RLock()         // RLock locks the tree from writing operations
 	defer tree.lock.RUnlock() // RUnlock is deferred to open the tree after traversal
-
+	traversalInOrder(tree.rootNode, function)
 }
