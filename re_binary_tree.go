@@ -49,3 +49,9 @@ func insertTreeNode(rootNode *Node, newTreeNode *Node) {
 		}
 	}
 }
+
+func (tree *BinarySearchTree) traverseInOrder(function func(int)) {
+	tree.lock.RLock()         // RLock locks the tree from writing operations
+	defer tree.lock.RUnlock() // RUnlock is deferred to open the tree after traversal
+
+}
