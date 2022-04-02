@@ -35,5 +35,11 @@ func (tree *BinarySearchTree) InsertElement(key, value int) {
 
 // insertTreeNode is for addition and is tied to the root node
 func insertTreeNode(rootNode *Node, newTreeNode *Node) {
-
+	if newTreeNode.key < rootNode.key {
+		if rootNode.leftNode == nil {
+			rootNode.leftNode = newTreeNode
+		} else {
+			insertTreeNode(rootNode.leftNode, newTreeNode)
+		}
+	}
 }
