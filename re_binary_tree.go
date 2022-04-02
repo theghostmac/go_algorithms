@@ -40,6 +40,8 @@ func insertTreeNode(rootNode *Node, newTreeNode *Node) {
 			rootNode.leftNode = newTreeNode
 		} else {
 			insertTreeNode(rootNode.leftNode, newTreeNode)
+		} else {
+			insertTreeNode(rootNode.leftNode, newTreeNode)
 		}
 	}
 }
