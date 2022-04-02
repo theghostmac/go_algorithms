@@ -25,9 +25,10 @@ func (tree *BinarySearchTree) InsertElement(key, value int) {
 	defer tree.lock.Unlock() // tree is unlocked before inserting an element
 	var treeNode *Node
 	treeNode = &Node{key, value, nil, nil}
-	if tree.rootNode == nil {
+	if tree.rootNode == nil { // if there is no existing root node,
 		tree.rootNode = treeNode
 	} else {
-		insertTreeNode(tree.rootNode, treeNode)
+		insertTreeNode(tree.rootNode, treeNode) // implement the insertion of a new node
+		// if there is an existing root Node
 	}
 }
