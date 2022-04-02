@@ -34,6 +34,6 @@ func (tree *BinarySearchTree) InsertElement(key, value int) {
 }
 
 // insertTreeNode is for addition and is tied to the root node
-func (rootNode *Node) insertTreeNode() {
+func insertTreeNode(rootNode *Node, newTreeNode *Node) {
 
 }
