@@ -42,6 +42,10 @@ func insertTreeNode(rootNode *Node, newTreeNode *Node) {
 			insertTreeNode(rootNode.leftNode, newTreeNode)
 		}
 	} else {
-		insertTreeNode(rootNode.leftNode, newTreeNode)
+		if rootNode.rightNode == nil {
+			insertTreeNode(rootNode.leftNode, newTreeNode)
+		} else {
+			insertTreeNode(rootNode.rightNode, newTreeNode)
+		}
 	}
 }
