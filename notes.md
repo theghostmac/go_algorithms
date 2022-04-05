@@ -32,3 +32,15 @@ Time Complexity, name, description
 7. O(2^n) - exponential - faster than all functions except factorial functions.
 8. O(n!) - factorial - faster than all functions
 
+## Types of Analysis
+1. Worst case: defines the input for which the algorithm takes the longest time, input for which the algorithm runs the slowest.
+2. Best case: defines the input for which the algorithm takes the least time, input for which the algorithm runs the fastest.
+3. Average case: predicts the running time of the algorithm, runs the algorithm many times with different inputs, compute the total running time, and assumes the input is random.
+
+Lower Bound <= Average Time <= Upper Bound
+
+Worst case: f(n) = n^2 + 500
+Best case: f(n) = n + 100n + 500
+
+# Asymptotic Notation
+They are used to represent upper and lower bounds.
