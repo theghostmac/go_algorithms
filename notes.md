@@ -22,3 +22,13 @@ Just take the highest number after approximation.
 n^4 + 2n^2 + 100n + 500  has the highest rate of growth is n^4.
 
 ## Commonly Used Rates of Growth
+Time Complexity, name, description
+1. O(1) - constant time - input size n
+2. O(log n) - logarithmic time - slower growing than ever linear function
+3. O(n) - linear time - functions grow linearly with the input size n
+4. O(n log n) - linear logarithmic time - faster growing than linear but slower than quadratic
+5. O(n^2) - quadratic time - they grow faster than the linear logarithm function
+6. O(n^3) - cubic time - faster than quadratic but slower than exponential
+7. O(2^n) - exponential - faster than all functions except factorial functions.
+8. O(n!) - factorial - faster than all functions
+
