@@ -43,4 +43,7 @@ Worst case: f(n) = n^2 + 500
 Best case: f(n) = n + 100n + 500
 
 # Asymptotic Notation
-They are used to represent upper and lower bounds.
+They are used to represent the upper and lower bounds. 
+## Big-O Notation
+The Big-O gives the tight upper bound of the given function, represented f(n) = O(g(n)).
+f(n) = n^4 + 100n^2 + 10n + 50, g(n) is n^4. 
