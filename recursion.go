@@ -12,7 +12,20 @@ func factorial(n int) int {
 	return n * factorial(n-1)
 }
 
-func main() {
-	twoFactorial := factorial(10)
-	fmt.Println(twoFactorial)
+// factorial Iterative algorithm
+func factorialIterative(n int) uint64 {
+	var factorialValue uint64 = 1
+	if n < 0 {
+		fmt.Println("Factorial of negative numbers is impossible.")
+	} else {
+		for i := 1; i <= n; i++ {
+			factorialValue *= uint64(i)
+		}
+	}
+	return factorialValue
 }
+
+func main() {
+	fmt.Println(factorial(10))
+	fmt.Println(factorialIterative(5))
+}g
