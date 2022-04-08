@@ -28,4 +28,4 @@ func factorialIterative(n int) uint64 {
 func main() {
 	fmt.Println(factorial(10))
 	fmt.Println(factorialIterative(5))
-}g
+}
