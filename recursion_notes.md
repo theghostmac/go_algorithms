@@ -43,9 +43,17 @@ return (some work and then a recursive call)
 10. Backtracking algorithms
 
 # Recursion Problems and Solutions
-## The Tower of Hanoi Problemg
-Features: three towers, a number of disks with different diameters.
-Algorithm: Let's name the towers *Source,* *Auxiliary,* and *Destination.*
-1. Move the top (n-1)th disk from Source to Auxiliary tower.
-2. Move the nth disk from Source to Destination tower.
-3. Move the (n-1)th disk from 
+## The Tower of Hanoi Problem
+Input an integer n and output a list of moves that solves the Tower of Hanoi. 
+**Features:** n = 3 (three towers), a number of disks with different diameters.
+
+**Algorithm:** Let's name the towers *Source,* *Auxiliary,* and *Destination.* Let's also name
+the disks 1, 2, and 3 standing for small, medium, and large.
+
+Step 1: move disk 1 from Source to Destination tower.
+Step 2: move disk 2 from Source to Auxiliary tower.
+Step 3: move disk 1 from Destination to Auxiliary tower.
+Step 4: move disk 3 from Source to Destination tower.
+Step 5: move disk 1 from Auxiliary to Source tower.
+Step 6: move disk 2 from Auxiliary to Destination tower.
+Step 7: move disk 1 from Source to Destination tower.
